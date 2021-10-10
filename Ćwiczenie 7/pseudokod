@@ -1,0 +1,64 @@
+// Pseudokod dla problemu Producenta i Konsumenta z buforem cyklicznym.
+// Wspolny bufor do przesylania danych znajduje sie w pamieci dzielonej.
+// Dostep do bufora jest synchronizowany semaforami.
+
+#define N ? // Rozmiar bufora
+
+typdef struct {
+    Towar bufor[N*P];              // Bufor mogacy pomiescic N jednostek towaru (P oznacza ilość producentów
+    int wstaw = 0; wyjmij = 0;     // Pozycje wstawiania oraz wyjmowania towaru    
+} Towar; // Definicja typu dla jednostek towaru
+
+semaphore PROD = N;          // Semafor do wstrzymywania Producenta
+semaphore KONS = 0;          // Semafor do wstrzymywania Konsumenta
+semaphore ZAPIS = 1;
+semaphore ODCZYT = 1;
+
+int producenci_PGID;          // PGID grupy procesów producent
+int konsumenci_PGID;          // PGID grupy procesów konsument
+
+// Proces Producent
+// ----------------
+
+STOP () {       // jeśli odebrano sygnał STOP
+    exit();     // zatrzymaj program
+}
+
+Towar towarProd;
+
+while (1) {
+    // Produkcja towaru
+    P(PROD);                             // Opusc semafor Producenta
+    P(ZAPIS);
+    while (wartosc_semafor(KONS) == N);  // przepełnienie bufora, czekaj na wolne miejsce
+    wstaw = (wstaw + 1) % N;    // Przesun pozycje wstawiania o 1 dalej
+    V(ZAPIS);
+    towarProd = czytaj(plik);            // czytaj towar z pliku
+    if (towarProd = null) {              // jeśli nie ma nic więcej do odczytania
+        kill (STOP, producenci_PGID);    // wyślij sygnał końca produkcji do wszystkich producentów
+    }
+    bufor[wstaw] = towarProd;   // Umiesc towar w buforze
+    V(KONS);                    // Podniesc semafor Konsumenta
+}
+
+// Proces Konsument
+// ----------------
+
+STOP () {       // jeśli odebrano sygnał STOP
+    exit();     // zatrzymaj program
+}
+
+Towar towarKons;
+
+while (1) {
+    P(KONS);    
+    P(ODCZYT);                       // Opusc semafor Konsumenta
+    towarKons = bufor[wyjmij];         // Umiesc towar w buforze
+    if (bufor == STOP) {               // sprawdź czy w buforze umieszczono kod STOP
+        kill (STOP, konsumenci_PGID);  // wyślij sygnał końca konsumpcji do wszystkich konsumentów
+    }
+    wyjmij = (wyjmij + 1) % N;         // Przesun pozycje wstawiania o 1 dalej
+    V(ODCZYT);
+    V(PROD);                           // Podniesc semafor Producenta
+    // Konsumpcja towaru
+}

@@ -1,0 +1,48 @@
+========================================================================
+Autor: Kimel-PK
+========================================================================
+
+* Zawartosc:
+============
+
+Pliki .c
+
+- programA.c sygnał opcja
+Przyjmuję dwa argumenty i umożliwia obsłużenie sygnału używając jednej z trzech opcji default, ignore, custom)
+
+- programB.c sygnał opcja programA
+Przyjmuje trzy argumenty, uruchamia programA jako trzeci argument i wysyła do niego sygnał z zewnątrz
+
+- programC.c sygnał opcja programC2 programA
+Przyjmuje cztery argumenty i uruchamia podprogram C2, a następnie wysyła sygnał do jego grupy procesów
+
+- programC2.c sygnał opcja programA
+Program pośredni, tworzy 3 podprocesy z użyciem programu A i czeka aż jego dzieci odbiorą sygnał od dziadka
+
+Plik README.txt z intrukcjami
+
+* Jak uruchomic programy:
+=========================
+
+-> Aby uruchomić podpunkt A, należy wykonać komende:
+       make SYGNAL=? OPCJA=? runA
+
+gdzie SYGNAL to numer sygnału, a opcja sposób obsłużenia [default/ignore/custom]
+
+-> Aby uruchomić podpunkt B, należy wykonać komende:
+       make SYGNAL=? OPCJA=? runB
+
+gdzie SYGNAL to numer sygnału, a opcja sposób obsłużenia [default/ignore/custom]
+
+-> Aby uruchomić podpunkt C, należy wykonać komende:
+       make SYGNAL=? OPCJA=? runC
+
+gdzie SYGNAL to numer sygnału, a opcja sposób obsłużenia [default/ignore/custom]
+
+-> Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
+       make clean
+
+-> W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+       make tar
+
+========================================================================

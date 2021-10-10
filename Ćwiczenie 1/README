@@ -1,0 +1,42 @@
+========================================================================
+Autor: Kimel-PK
+========================================================================
+
+* Zawartosc:
+============
+
+Pliki .c osobne do każdego podpunktu ćwiczenia:
+- programA.c
+- programB.c
+- programC.c
+- programD.c
+- programE.c
+
+Plik README.txt z intrukcjami
+Plik odpowiedzi.txt z odpowiedziami na pytania zadane w podpunktach C i E
+
+* Jak uruchomic programy:
+=========================
+
+-> Aby uruchomić podpunkt A ćwiczenia, należy wykonać komende:
+       make runA
+
+-> Aby uruchomic podpunkt B ćwiczenia, należy wykonać komende:
+       make runB
+
+-> Aby uruchomic podpunkt C ćwiczenia, należy wykonać komende:
+       make runC
+
+-> Aby uruchomic podpunkt D ćwiczenia, należy wykonać komende:
+       make runD
+
+-> Aby uruchomic podpunkt E ćwiczenia, należy wykonać komende:
+       make runE
+
+-> Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
+       make clean
+
+-> W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+       make tar
+
+========================================================================

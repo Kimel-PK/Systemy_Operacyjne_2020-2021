@@ -1,0 +1,39 @@
+========================================================================
+Autor: Kimel-PK
+========================================================================
+
+* Opis programu:
+================
+
+Program implementuje problem wzajemnego wykluczania wątków standardu POSIX z użyciem muteksów,
+globalna liczba jest kolejno inkrementowana przez wątki, muteks zabezpiecza przed jednoczesnym dostępem
+dwóch wątków do zasobu dzielonego
+
+* Zawartosc:
+============
+
+Pliki .c
+
+- cwiczenie9.c
+Uruchamia podaną ilość wątków o podanej ilości sekcji krytycznych.
+Każdy wątek uzyskuje dostęp do zmiennej globalnej i zwiększa jej wartość o 1.
+Na koniec sprawdzana jest poprawność synchronizacji wątków
+
+- watki.c, watki.h
+Biblioteka z funkcjami potrzebnymi do obsługi wątków.
+
+Plik README z intrukcjami
+
+* Jak uruchomic programy:
+=========================
+
+-> Aby uruchomić program, należy wykonać komende:
+       make run9
+
+-> Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
+       make clean
+
+-> W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+       make tar
+
+========================================================================

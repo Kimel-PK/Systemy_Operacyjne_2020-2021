@@ -1,0 +1,36 @@
+========================================================================
+Autor: Kimel-PK
+========================================================================
+
+* Opis programu:
+================
+
+Program implementuje działanie centralnego serwera, który wykonuje obliczenia zlecone mu przez podłączonych do niego klientów.
+Przesyłanie danych jest realizowane za pomocą kolejek komunikatów
+
+* Zawartosc:
+============
+
+Pliki .c
+
+- serwer.c
+Program serwera, który czeka na komunikaty, wykonuje zawarte w nich działania i odsyła do odpowiednich procesów
+
+- klient.c
+Ustanawia połączenie z serwerem, czeka aż uzytkownik wpiszę w konsole działanie po czym wysyła je w formie komunikatu do serwera i odbiera od niego wynik
+
+Plik README z intrukcjami
+
+* Jak uruchomic programy:
+=========================
+
+-> Aby uruchomić program, należy wykonać komende:
+       make run8
+
+-> Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
+       make clean
+
+-> W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+       make tar
+
+========================================================================

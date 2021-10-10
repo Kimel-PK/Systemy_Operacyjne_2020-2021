@@ -1,0 +1,51 @@
+========================================================================
+Autor: Kimel-PK
+========================================================================
+
+* Opis programu:
+================
+
+Program implementuje problem producenta i konsumenta z wykorzystaniem semaforów oraz pamięci dzielonej
+Przesyłanie danych jest realizowane za pomocą bufora cyklicznego do którego dostęp jest synchronizowany za pomocą semaforów
+
+* Zawartosc:
+============
+
+Pliki .c
+
+- program7.c program_producent program_konsument
+Program główny tworzący semafory i pamięć dzieloną, producent i konsumet są podprocesami tego programu
+
+- producent.c semafor_producent semafor_konsument nazwa_pd plik_we
+Odczytuje z pliku wejściowego dane i zapisuje je w pamięci dzielonej
+
+- konsument.c semafor_producent semafor_konsument nazwa_pd plik_wy
+Odczytuje z segmentu pamięci dzielonej dane i zapisuje je do pliku
+
+Plik README z intrukcjami
+Plik pseudokod z rozwiązaniem problemu z wieloma producentami i konsumentami
+Plik surowce z przykładowmi danymi
+Pusty plik skonsumowane
+
+* Jak uruchomic programy:
+=========================
+
+-> Aby uruchomić program, należy wykonać komende:
+       make run7
+
+-> Aby uruchomić program korzystając z biblioteki statycznej, należy wykonać komende:
+       make run7s
+
+-> Aby uruchomić program korzystając z biblioteki dzielonej (wersja make 1), należy wykonać komende:
+       make run7d1
+
+-> Aby uruchomić program korzystając z biblioteki dzielonej (wersja make 2), należy wykonać komende:
+       make run7d2
+
+-> Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
+       make clean
+
+-> W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+       make tar
+
+========================================================================

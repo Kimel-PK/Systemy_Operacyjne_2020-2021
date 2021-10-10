@@ -1,0 +1,30 @@
+========================================================================
+Autor: Kimel-PK
+========================================================================
+
+* Zawartosc:
+============
+
+Pliki .c
+- cwiczenie2.c (główny program, zmodyfikowane ćwiczenie 1B, wypisywanie identyfikatorów procesów z użyciem funkcji exec)
+- wypisz.c (program z ćwiczenia 1A wypisujący identyfikatory procesów)
+
+Plik README.txt z intrukcjami
+Plik odpowiedzi.txt z odpowiedzią na pytanie w ćwiczeniu 2
+
+* Jak uruchomic programy:
+=========================
+
+-> Aby uruchomić program ćwiczenie 2, należy wykonać komende:
+       make run2
+
+-> Aby uruchomic podprogram z ćwiczenia 2, należy wykonać komende:
+       make runW
+
+-> Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
+       make clean
+
+-> W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+       make tar
+
+========================================================================

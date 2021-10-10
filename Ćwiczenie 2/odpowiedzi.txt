@@ -1,0 +1,6 @@
+===================== Ćwiczenie 2 ===================================
+
+Ile procesow powstanie przy n-krotnym wywołaniu funkcji fork-exec jak wyzej i dlaczego?
+
+Powstanie n procesów potomnych ponieważ, funkcja exec przełącza proces na wykonywanie programu wypisz.c,
+a co za tym idzie kolejne przejścia pętli for głównego programu nie zostaną wykonane.

@@ -1,0 +1,37 @@
+========================================================================
+Autor: Kimel-PK
+========================================================================
+
+* Opis programu:
+================
+
+Program implementuje problem jednoczesnego korzystania z zasobu współdzielonego przez kilka procesów
+Do pliku numer.txt wpisywana jest liczba 0 następnie procesy potomne odczytują tą wartość, inkrementują ją i zapisują ponownie do pliku
+
+* Zawartosc:
+============
+
+Pliki .c
+
+- powielacz.c nazwa_podprogramu ilosc_inkrementatorow ilosc_sekcji_krytycznych plik_we_wy nazwa_semafora czy_synchronizowac
+Program główny przedstawiający problem jednoczesnego korzystania z zasobu współdzielonego przez X procesów z X sekcjami krytycznymi
+
+- inkrementator.c ilosc_sekcji_krytycznych plik_we_wy nazwa_semafora czy_synchronizowac
+Odczytuje z pliku numer.txt liczbę, inkrementuje ją i zapisuje z powrotem do pliku
+
+Plik README.txt z intrukcjami
+Plik numer.txt
+
+* Jak uruchomic programy:
+=========================
+
+-> Aby uruchomić program, należy wykonać komende:
+       make run6
+
+-> Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
+       make clean
+
+-> W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+       make tar
+
+========================================================================

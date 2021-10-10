@@ -1,0 +1,45 @@
+========================================================================
+Autor: Kimel-PK
+========================================================================
+
+* Opis programu:
+================
+
+Program przedstawia implementacje problemu producenta i konsumenta z wykorzystywaniem potoku nazwanego,
+podpunkt A używa do tego celu procesów potomnych,
+w podpunkcie B podprogramy uruchamiane są jako procesy nie powiązane za sobą, a tworzenie i usuwanie potoku zrealizowane jest poleceniami powłoki
+
+* Zawartosc:
+============
+
+Pliki .c
+
+- programA.c prog_producent prog_konsument plik_we plik_wy potok
+Przyjmuje 5 argumentów, symuluje problem producenta i konsumenta z wykorzystaniem potoku nazwanego i procesów potomnych
+
+- producent.c plik_we potok
+Przyjmuje dwa argumenty, pobiera dane z plik_we i przekazje je do wskazanego potoku
+
+- konsument.c plik_wy potok
+Przyjmuje dwa argumenty, pobiera dane z potoku i zapisuje je w plik_wy
+
+Plik README.txt z intrukcjami
+Plik surowce z przykładowymi danymi
+Pusty plik skonsumowane
+
+* Jak uruchomic programy:
+=========================
+
+-> Aby uruchomić podpunkt A, należy wykonać komende:
+       make runA
+
+-> Aby uruchomić podpunkt B, należy wykonać komende:
+       make runB
+
+-> Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
+       make clean
+
+-> W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+       make tar
+
+========================================================================

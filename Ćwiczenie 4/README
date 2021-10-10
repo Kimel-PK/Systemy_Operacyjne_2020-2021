@@ -1,0 +1,32 @@
+========================================================================
+Autor: Kimel-PK
+========================================================================
+
+* Zawartosc:
+============
+
+Pliki .c
+
+- program4.c plik_we plik_wy
+Przyjmuję dwa argumenty plik wejścia oraz wyjścia i symuluje na nich problem producenta i konsumenta.
+Dane z pliku wejścia są pobierane i przesyłane przez potok do pliku wyjściowego z nierównym tempem.
+Proces przesyłania danych jest wypisywany na ekranie
+
+Plik README.txt z intrukcjami
+
+Przykładowy plik wejścia "surowce"
+Przykładowy plik wyjścia "skonsumowane"
+
+* Jak uruchomic programy:
+=========================
+
+-> Aby uruchomić program, należy wykonać komende:
+       make run4
+
+-> Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
+       make clean
+
+-> W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+       make tar
+
+========================================================================

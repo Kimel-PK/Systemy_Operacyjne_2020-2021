@@ -1,0 +1,52 @@
+========================================================================
+Autor: ...............,                               Krakow, 12.02.2021
+========================================================================
+
+* Zawartosc:
+============
+
+Katalog programy zawiera dwa przykladowe proste programy w jezyku C:
+--------------------------------------------------------------------
+
+I.  Program wypisujacy w losowo wybranych miejscach na ekranie tekst: 
+    Witaj na kursie "Systemy operacyjne"!
+    Program sklada sie z jednego modulu: 
+    1) hello.c  - program glowny. 
+
+II. Prosty program do wyznaczania wartosci liczby pi metoda Monte Carlo
+    oraz wyliczania calki z funkcji dwoch zmiennych metoda podstawowa MC.
+    Program sklada sie z dwoch modulow:    
+    1) mcint.c              - program glowny,
+    2) funkcja.c, funkcja.h - przykladowa funkcja 2-zmiennych. 
+
+------------------------------------------------------------------------
+
+* Jak uruchomic programy:
+=========================
+
+Katalog zawiera program Makefile do kompilacji, linkowania
+i uruchamiania powyzszych programow, a takze czyszczenia katalogu 
+i jego archiwizacji.
+
+-> Aby uruchomic 1-szy program, nalezy wykonac komende:
+       make run1
+
+-> Aby uruchomic 2-gi program, nalezy wykonac komende:
+   a) dla biblioteki statycznej (static library; patrz Makefile):
+      make run2s
+   b) dla biblioteki dzielonej (shared library; patrz Makefile):
+    1) wersja 1:
+      make run2d1
+    2) wersja 2:
+      make run2d2
+
+-> Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
+       make clean
+
+-> W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+       make tar
+
+========================================================================
+
+
+
