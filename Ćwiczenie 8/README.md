@@ -52,7 +52,7 @@ Podobnie jak dla semaforów i pamięci dzielonej, stworzyć własną bibliotekę
 
 Użyć flag kompilatora: `-Wall -std=c99 -pedantic`
 
-## Opis programu:
+## Opis programu
 
 Program implementuje działanie centralnego serwera, który wykonuje obliczenia zlecone mu przez podłączonych do niego klientów.
 
