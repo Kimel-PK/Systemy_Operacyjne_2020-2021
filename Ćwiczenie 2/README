@@ -1,30 +1,46 @@
-========================================================================
-Autor: Kimel-PK
-========================================================================
+# ĆWICZENIE 2: Uruchamianie Programów: exec
 
-* Zawartosc:
-============
+## Treść zadania
 
-Pliki .c
+Zmodyfikować program z ćwiczenia 1b, tak aby komunikaty procesów potomnych były wypisywane przez program uruchamiany przez funkcję `exec`.
+
+Nazwę programu do uruchomienia przekazywać przez argumenty programu procesu macierzystego.
+
+> Ile procesów powstanie przy n-krotnym wywołaniu funkcji fork-exec jak wyżej i dlaczego?
+
+## Zawartość
+
+Pliki `.c`
+
 - cwiczenie2.c (główny program, zmodyfikowane ćwiczenie 1B, wypisywanie identyfikatorów procesów z użyciem funkcji exec)
 - wypisz.c (program z ćwiczenia 1A wypisujący identyfikatory procesów)
 
-Plik README.txt z intrukcjami
-Plik odpowiedzi.txt z odpowiedzią na pytanie w ćwiczeniu 2
+Plik `README.txt` z instrukcjami
 
-* Jak uruchomic programy:
-=========================
+Plik `odpowiedzi.txt` z odpowiedzią na pytanie w ćwiczeniu 2
 
--> Aby uruchomić program ćwiczenie 2, należy wykonać komende:
-       make run2
+## Jak uruchomić programy
 
--> Aby uruchomic podprogram z ćwiczenia 2, należy wykonać komende:
-       make runW
+Aby uruchomić program ćwiczenie 2, należy wykonać komendę:
 
--> Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
-       make clean
+```bash
+make run2
+```
 
--> W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
-       make tar
+Aby uruchomić podprogram z ćwiczenia 2, należy wykonać komendę:
 
-========================================================================
+```bash
+make runW
+```
+
+Aby wyczyścić zawartość katalogu (usunać zbędne pliki), należy wykonać:
+
+```bash
+make clean
+```
+
+W celu archiwizacji oraz kompresji katalogu należy wykonać:
+
+```bash
+make tar
+```

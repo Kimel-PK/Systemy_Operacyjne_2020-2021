@@ -2,7 +2,7 @@
 Autor: ...............,                               Krakow, 12.02.2021
 ========================================================================
 
-* Zawartosc:
+* Zawartość:
 ============
 
 Katalog programy zawiera dwa przykladowe proste programy w jezyku C:
@@ -21,17 +21,17 @@ II. Prosty program do wyznaczania wartosci liczby pi metoda Monte Carlo
 
 ------------------------------------------------------------------------
 
-* Jak uruchomic programy:
+* Jak uruchomić programy:
 =========================
 
 Katalog zawiera program Makefile do kompilacji, linkowania
 i uruchamiania powyzszych programow, a takze czyszczenia katalogu 
 i jego archiwizacji.
 
--> Aby uruchomic 1-szy program, nalezy wykonac komende:
+-> Aby uruchomić 1-szy program, należy wykonać komendę:
        make run1
 
--> Aby uruchomic 2-gi program, nalezy wykonac komende:
+-> Aby uruchomić 2-gi program, należy wykonać komendę:
    a) dla biblioteki statycznej (static library; patrz Makefile):
       make run2s
    b) dla biblioteki dzielonej (shared library; patrz Makefile):
@@ -40,10 +40,10 @@ i jego archiwizacji.
     2) wersja 2:
       make run2d2
 
--> Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
+-> Aby wyczyścić zawartość katalogu (usunąć zbędne pliki), należy wykonać:
        make clean
 
--> W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
+-> W celu archiwizacji oraz kompresji katalogu należy wykonać:
        make tar
 
 ========================================================================

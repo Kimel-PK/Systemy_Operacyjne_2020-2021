@@ -1,42 +1,77 @@
-========================================================================
-Autor: Kimel-PK
-========================================================================
+# ĆWICZENIE 1: Procesy Potomne: fork
 
-* Zawartosc:
-============
+## Treść zadania
 
-Pliki .c osobne do każdego podpunktu ćwiczenia:
+### Podpunkt (a)
+
+Napisać program wypisujący identyfikatory UID, GID, PID, PPID i PGID dla danego procesu.
+
+### Podpunkt (b)
+
+Wywołać funkcję fork trzy razy (najlepiej w pętli for) i wypisać powyższe identyfikatory dla procesu macierzystego oraz wszystkich procesów potomnych.
+Przy pomocy funkcji wait sprawić, aby proces macierzysty zaczekał na zakończenie wszystkich procesów potomnych.
+
+### Podpunkt (c)
+
+Jak w (b), tylko przy użyciu funkcji sleep (nie używać funkcji wait) sprawiać by procesy potomne były adoptowane przez proces init lub systemd;
+poleceniem pstree -p z poziomu powłoki wyswietlić drzewo procesów w danym systemie i zidentyfikować proces adoptujący osierocone procesy.
+
+### Podpunkt (d)
+
+Jak w (b), tylko wstawić funkcję sleep w takich miejscach programu, aby procesy pojawiały się na ekranie grupowane pokoleniami od najstarszego do najmłodszego, a proces macierzysty kończył się dopiero po procesach potomnych (nie używać funkcji wait).
+
+Na podstawie wyników programu sporządzić (w pliku tekstowym) "drzewo genealogiczne" tworzonych procesów z zaznaczonymi identyfikatorami PID, PPID i PGID.
+
+### Podpunkt (e)
+
+Jak w (b), tylko przy użyciu fukcji `setpgid` sprawić by każdy proces potomny stawał się liderem swojej własnej grupy procesów.
+
+Ile procesów powstanie przy n-krotnym wywołaniu funkcji fork i dlaczego?
+
+W celu narysowania drzewa genealogicznego procesów, najpierw skopiować do pliku tekstowego wydruk na ekranie z przykładowego uruchomienia programu, a następnie w kolejnych liniach wypisać wartości(PID,PPID,PGID) procesów z kolejnych pokoleń i połączyć je kreskami, np.
+
+```text
+                  (PID1,PPID1,PGID1)
+
+             |                         |
+
+    (PID2a,PPID2a,PGID2a)      (PID2b,PPID2b,PGID2b)
+```
+
+## Zawartość
+
+Pliki `.c` osobne do każdego podpunktu ćwiczenia:
+
 - programA.c
 - programB.c
 - programC.c
 - programD.c
 - programE.c
 
-Plik README.txt z intrukcjami
-Plik odpowiedzi.txt z odpowiedziami na pytania zadane w podpunktach C i E
+Plik `README.txt` z instrukcjami
 
-* Jak uruchomic programy:
-=========================
+Plik `odpowiedzi.txt` z odpowiedziami na pytania zadane w podpunktach C i E
 
--> Aby uruchomić podpunkt A ćwiczenia, należy wykonać komende:
-       make runA
+### Jak uruchomić programy
 
--> Aby uruchomic podpunkt B ćwiczenia, należy wykonać komende:
-       make runB
+Aby uruchomić konkretny podpunkt ćwiczenia, należy wykonać odpowiednią komendę z pośród:
 
--> Aby uruchomic podpunkt C ćwiczenia, należy wykonać komende:
-       make runC
+```bash
+make runA
+make runB
+make runC
+make runD
+make runE
+```
 
--> Aby uruchomic podpunkt D ćwiczenia, należy wykonać komende:
-       make runD
+Aby wyczyścić zawartość katalogu (usunąć zbędne pliki), należy wykonać:
 
--> Aby uruchomic podpunkt E ćwiczenia, należy wykonać komende:
-       make runE
+```bash
+make clean
+```
 
--> Aby wyczyscic zawartosc katalogu (usunac zbedne pliki), nalezy wykonac:
-       make clean
+W celu archiwizacji oraz kompresji katalogu należy wykonać:
 
--> W celu archiwizacji oraz kompresji katalogu nalezy wykonac:
-       make tar
-
-========================================================================
+```bash
+make tar
+```

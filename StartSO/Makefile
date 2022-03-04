@@ -13,7 +13,7 @@
 #------------------------------------------------------------------------------
 # Jezeli uzywamy rozszerzen w nazwach plikow, ktore nie znajduja sie na
 # liscie parametrow wewnetrznych make (mozna je sprawdzic wykonujac: make -p),
-# to nalezy je umiescic po slowie .SUFFIXES:, np.:
+# to należy je umiescic po slowie .SUFFIXES:, np.:
 .SUFFIXES: .c .cpp .o .x .h
 #------------------------------------------------------------------------------
 # Ponizej przyklady definiowania makr (nie musza byc oznaczane wielkimi literami,
@@ -81,11 +81,11 @@ ARFLAGS = rsv
 # prawej - "prerekwizyty" (tzn. to od czego zalezy "cel"). 
 # Najpierw make sprawdza czy plik celowy (tu: odpowiedni plik z rozszerzeniem 
 # .o) jest aktualny (tzn. nowszy od odpowiednich plikow .c i .h) - jezeli nie, 
-# to wykonuje komende ponizej (tutaj: kompilacja). 
+# to wykonuje komendę ponizej (tutaj: kompilacja). 
 # Znak % oznacza wzorzec, tzn. dowolny ciag znakow, ktore tworza rdzen nazwy 
 # pliku. 
 # Zmienna wewnetrzna $< oznacza pierwszy prerekwizyt, tu: nazwe odpowiedniego 
-# pliku z rozszerzeniem .c, ktory nalezy uaktualnic aby otrzymac plik .o. 
+# pliku z rozszerzeniem .c, ktory należy uaktualnic aby otrzymac plik .o. 
 # Uwaga: Komenda zaczyna sie od znaku tabulacji (niewidocznego).
 %.o: %.c %.h
 	$(CO) $(CFLAGS) -c $<
@@ -103,7 +103,7 @@ ARFLAGS = rsv
 all: $(EXEC1) $(EXEC2s) $(EXEC2d1) $(EXEC2d2) 
 ###############################################################################
 # Jawna regula zaleznosci - najpierw uaktualnij pliki po prawej stronie 
-# dwukropka, a potem wykonaj komende, ktora jest w nastepnej linijce (tu:
+# dwukropka, a potem wykonaj komendę, ktora jest w nastepnej linijce (tu:
 # wykonaj linkowanie). 
 # Zmienna wewnetrzna $@ oznacza cel, tzn. obiekt, ktory jest po lewej stronie 
 # dwukropka, tu: $(EXEC1);  a zmienna $^ oznacza wszystkie prerekwizyty, tzn.
@@ -179,10 +179,10 @@ run2d1: $(EXEC2d1)
 	./$(EXEC2d1)
 # 2.2) z biblioteka dzielona - wersja 2 (znak \ oznacza kontynuacje w nastepnej
 #      linii) -> do zmiennej srodowiskowej LD_LIBRARY_PATH trzeba dodac sciezke
-#      do katalogu z nowa biblioteka dzielona i uruchomic program w tej samej
-#      powloce (dlatego wszystko jest ujete w nawiasy - make wykonujac komende
+#      do katalogu z nowa biblioteka dzielona i uruchomić program w tej samej
+#      powloce (dlatego wszystko jest ujete w nawiasy - make wykonujac komendę
 #      tworzy nowa powloke, a nastepnie ja zamyka).
-#      Wykonujac to samo z linii komend (bez make) wystarczy raz wykonac
+#      Wykonujac to samo z linii komend (bez make) wystarczy raz wykonać
 #      pierwsza linijke (bez ; i \), a potem mozna wielokrotnie wykonywac
 #      program w tej powloce.     
 run2d2: $(EXEC2d2)
