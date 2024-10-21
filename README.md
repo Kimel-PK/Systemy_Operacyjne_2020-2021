@@ -1,5 +1,9 @@
 # Systemy_Operacyjne_2020-2021
 
+Wersja demo mojego kwantowego sokobana jest już dostępna do zagrania na Steam! Kliknij w baner aby dowiedzieć się więcej!
+
+[![superposition demo banner](https://github.com/user-attachments/assets/c2d0d9ae-f756-4fea-8cb5-628162b899ee)](https://store.steampowered.com/app/2352130/SuperPosition/)
+
 ## [Ćwiczenie 1](Ćwiczenie%201/)
 Tworzenie procesów i wypisywanie ich identyfikatorów systemowych.
 
